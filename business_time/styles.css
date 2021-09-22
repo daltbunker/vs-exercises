@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Stick+No+Bills&display=swap');
+
+* {
+    font-family: 'Oswald', 'sans-serif';
+    color: rgb(0, 0, 0);
+}
+
+.head-container {
+    margin: -40px -20px 0px -20px;
+    background: url('https://images.unsplash.com/photo-1547447134-cd3f5c716030?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=928&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 90%;
+    height: 300px;
+}
+
+.head-container h1 {
+    color: black;
+    font-family: 'Stick No Bills', 'sans-serif';
+    font-size: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    width: 160px;
+}
+
+.skate-banner {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    height: 30px;
+    top: 60px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.main-content {
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 300px;
+    background-size: 130%;
+    background-repeat: no-repeat;
+}
+
+.main-content a {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(56, 49, 49, 0.479);
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.main-content a:hover {
+    background-color: rgba(0, 0, 0, 0.562);
+    transition: 500ms;
+}
+
+.main-content:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1611858447195-ce967dd3ff49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=928&q=80');
+}
+
+.main-content:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1534206303345-04c4c6d95cce?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c2thdGUlMjBicmFuZHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60');
+}
+
+.main-content:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1559684548-5b77a00371bd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80');
+}
+
+.footer {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.footer a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer img{
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    height: 20px;
+}
+
+
+/* Ipad */
+@media only screen and (min-width: 420px) {
+    .head-container {
+        height: 500px;
+        margin-top: -80px;
+    }
+
+    .head-container h1 {
+        font-size: 110px;
+        width: 300px;
+    }
+
+    .skate-banner {
+        top: 100px;
+    }
+
+    .main-content {
+        height: 500px;
+    }
+
+    .main-content a {
+        font-size: 50px;
+    }
+
+    .main-content:nth-child(3) {
+        background-position: 50% 50%;
+    }
+
+    .footer {
+        font-size: 30px;
+    }
+
+    .footer img {
+        height: 30px;
+        padding-top: 10px;
+    }
+}
+
+/* Web */
+@media only screen and (min-width: 1030px) {
+    .head-container {
+        height: 700px;
+        margin-top: -110px;
+    }
+
+    .head-container h1 {
+        margin-left: 50px;
+        font-size: 160px;
+        width: 600px;
+    }
+
+    .skate-banner {
+        top: 140px;
+    }
+
+    .main-content {
+        height: 700px;
+    }
+}
