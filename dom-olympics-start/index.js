@@ -35,3 +35,39 @@ messages[3].textContent = "Ya dude i'll be there";
 
 
 // Silver
+var dropDown = document.getElementById("theme-drop-down");
+
+
+dropDown.onchange = updateTheme;
+
+function updateTheme() {
+    console.log("update")
+    var theme = dropDown.value.split('-')
+    for (var i = 0; i < messages.length; i++) {
+        if (i % 2 === 0) {
+            messages[i].style.backgroundColor = theme[0];
+        } else {
+            messages[i].style.backgroundColor = theme[1];
+        }
+    }
+}
+
+// Gold
+var sendForm = document["message"]
+var userMessage = sendForm.input.value;
+var sendBtn = sendForm["send-button"];
+var messagesContainer = document.querySelector(".messages");
+
+sendBtn.addEventListener("click", addMessage)
+
+function addMessage() {
+    newMessage = document.createElement("div");
+    newMessage.textContent = userMessage;
+    newMessage.classList.add("message");
+    if (messages.length % 2 == 0) {
+        newMessage.classList.add("left");
+    } else {
+        newMessage.classList.add("right");
+    }
+    messagesContainer.appendChild(newMessage);
+}
