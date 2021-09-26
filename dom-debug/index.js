@@ -1,20 +1,22 @@
 const colors = ["red", "blue", "green"]
 
 document.getElementById("add").addEventListener("click", function(e){  // Changed from onclick to click
+    console.log("Button", e)
     const subItem = createSubItem(e)
     document.getElementById("list").appendChild(subItem)
 })
 
 function createDropDown(){
     const dropDown = document.createElement("select")
-    for (let i = 0; i < colors; i++){
-        const option = createElement("option") 
-        option.innerHTML = colors[i]
+    for (let i = 0; i < colors.length; i++){
+        const option = document.createElement("option") 
+        option.textContent = colors[i] // changed from innerHTML to textContent
         option.value = colors[i]
         dropDown.append(option)
     }
-    dropDown.addEventListener("onchange", function(e){
-        e.target.parent.backgroundColor = e.target.value
+    dropDown.addEventListener("change", function(e){
+        console.log("Dropdown", e)
+        e.target.parentElement.style.backgroundColor = e.target.value // changed parent to parentElement and added .style
     })
     return dropDown
 }
@@ -22,9 +24,10 @@ function createDropDown(){
 function createSubItem(e){
     const subItem = document.createElement("div")
     var subItemValue = document.getElementById("input")
-    subItem.textContent = subItemValue
+    subItem.textContent = subItemValue.value // added .value
     const dropDown = createDropDown()
     subItem.appendChild(dropDown)
+    dropDown.parentElement.style.backgroundColor = dropDown.value;  // initializes bkg color to red
     subItem.setAttribute("class", "subItem")
     return subItem
 }
