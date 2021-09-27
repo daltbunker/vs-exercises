@@ -1,6 +1,6 @@
 const colors = ["red", "blue", "green"]
 
-document.getElementById("add").addEventListener("click", function(){  // Changed from onclick to click
+document.getElementById("add").addEventListener("click", function(){  // Changed from onclick to click and removed 'e' parameter
     const subItem = createSubItem()
     document.getElementById("list").appendChild(subItem)
 })
@@ -20,7 +20,7 @@ function createDropDown(){
     return dropDown
 }
 
-function createSubItem(){ // removed e as parameter
+function createSubItem(){ // removed 'e' parameter
     const subItem = document.createElement("div")
     var subItemValue = document.getElementById("input")
     subItem.textContent = subItemValue.value // added .value
