@@ -1,10 +1,9 @@
 const itemList = document.getElementById("list");
-const deleteBtns = document.getElementsByClassName("")
 const form = document.addItem;
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
-    addListItem()
+    e.preventDefault();
+    addListItem();
 })
 
 
@@ -13,21 +12,41 @@ function addListItem() {
     const newTitle = document.createElement("div");
     const newEditBtn = document.createElement("button");
     const newDeleteBtn = document.createElement("button");
+    const newInput = document.createElement("input")
 
-    newTitle.textContent = form.title.value
-    form.title.value = ""
+    newTitle.textContent = form.title.value;
+    form.title.value = "";
     newEditBtn.textContent = "edit";
-    newEditBtn.classList.add("edit");
+    newEditBtn.classList.add("edit")
     newDeleteBtn.textContent = "X";
-    newDeleteBtn.classList.add("delete");
+    newDeleteBtn.classList.add("delete")
+    newInput.style.display = "none";
 
     newDeleteBtn.addEventListener("click", e => {
-        e.target.parentElement.remove()
+        e.target.parentElement.remove();
     });
 
+    newEditBtn.addEventListener("click", e => editListItem(e));
+
     newListItem.appendChild(newTitle);
+    newListItem.appendChild(newInput);
     newListItem.appendChild(newEditBtn);
+    newListItem.appendChild(newDeleteBtn);
     newListItem.appendChild(newDeleteBtn);
 
     itemList.prepend(newListItem);
+}
+
+function editListItem(e) {
+    input = e.target.previousSibling;
+    if (e.target.textContent === "edit") {
+        input.style.display = "inline";
+        input.value = input.previousSibling.textContent;
+        e.target.textContent = "save";
+    } else {
+        input.previousSibling.textContent = input.value;
+        input.value = "";
+        input.style.display = "none";
+        e.target.textContent = "edit";
+    }
 }
