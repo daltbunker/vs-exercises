@@ -3,18 +3,18 @@ const form = document.addItem;
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    addListItem();
+    addListItem(form.title.value);
 })
 
 
-function addListItem() {
+function addListItem(formValue) {
     const newListItem = document.createElement("li");
     const newTitle = document.createElement("div");
     const newEditBtn = document.createElement("button");
     const newDeleteBtn = document.createElement("button");
     const newInput = document.createElement("input")
 
-    newTitle.textContent = form.title.value;
+    newTitle.textContent = formValue;
     form.title.value = "";
     newEditBtn.textContent = "edit";
     newEditBtn.classList.add("edit")
@@ -50,3 +50,8 @@ function editListItem(e) {
         e.target.textContent = "edit";
     }
 }
+
+addListItem("bananas")
+addListItem("bread")
+addListItem("eggs")
+addListItem("dish soap")
