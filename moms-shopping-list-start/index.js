@@ -21,12 +21,11 @@ function addListItem(formValue) {
     newDeleteBtn.textContent = "X";
     newDeleteBtn.classList.add("delete")
     newInput.style.display = "none";
-
+    
+    newEditBtn.addEventListener("click", e => editListItem(e));
     newDeleteBtn.addEventListener("click", e => {
         e.target.parentElement.remove();
     });
-
-    newEditBtn.addEventListener("click", e => editListItem(e));
 
     newListItem.appendChild(newTitle);
     newListItem.appendChild(newInput);
@@ -50,6 +49,7 @@ function editListItem(e) {
         e.target.textContent = "edit";
     }
 }
+
 
 addListItem("bananas")
 addListItem("bread")
