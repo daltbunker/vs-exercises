@@ -1,0 +1,157 @@
+@font-face {
+    font-family: Mario;
+    src: url('SuperMario256.ttf');
+  }
+
+
+* {
+    font-family: Mario;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #ce0102, #800000);
+}
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.baddies {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.baddie {
+    text-align: center;
+    border-top: 3px solid rgb(0, 0, 0);
+    width: 70%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.baddie:nth-child(3) {
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.baddie-label {
+    color: #0d4488;
+    font-size: 28px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(214, 188, 188);
+}
+
+.baddie img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.baddie-price {
+    color: #fdee02;
+    margin-bottom: 10px;
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.baddie input {
+    font-family: Arial;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20px;
+    width: 55px;;
+}
+
+.total-container {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 30px;
+}
+
+.total-container h3{
+    color: #0d4488;
+    font-size: 28px;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(214, 188, 188);
+}
+
+.btns {
+    border: none;
+    font-size: 25px;
+    padding: 17px 10px 10px 10px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
+
+.btns {
+    cursor: pointer;
+}
+
+#clear-btn {
+    display: none;
+    color: white;
+    background-color: black;
+    margin-top: 20px;
+}
+
+.total-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+}
+
+#result {
+    color: #fdee02;
+    font-size: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.result-label {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #fdee02;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+    margin: 8px;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 800px) {
+    .heading {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .heading {
+        font-size: 80px;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
