@@ -6,6 +6,7 @@ form.addEventListener("submit", e => {
     result.textContent = sumCoins();
     form.reset();
     addClear();
+    form.enter.disabled = true;
 })
 
 function sumCoins() {
@@ -18,6 +19,7 @@ function addClear() {
     clearBtn.addEventListener("click", () => {
         result.textContent = 0;
         clearBtn.style.display = "none";
+        form.enter.disabled = false;
     })
 
 }
