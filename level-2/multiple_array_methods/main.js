@@ -54,4 +54,7 @@ function sortedOfAge(arr){
         }
     ]
 
-console.log(sortedOfAge(peopleArray));
+// console.log(sortedOfAge(peopleArray));
+
+
+

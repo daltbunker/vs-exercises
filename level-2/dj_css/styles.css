@@ -1,0 +1,92 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+}
+
+audio {
+    text-align: center;
+}
+
+.row {
+    height: 250px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 250px;
+}
+
+#box-1 {
+    background-color: blueviolet;
+    transition: background-color 500ms, border 500ms 500ms;
+}
+
+#box-1:hover {
+    background-color: rgb(30, 129, 133);
+    border: 48px solid rgb(248, 145, 10);
+}
+
+#box-2 {
+    background-color: rgb(49, 219, 100);
+    transition: height 1s, width 1s;
+}
+
+#box-2:hover {
+    height: 200px;
+    width: 250px;
+}
+
+#box-3 {
+    background-color: rgb(226, 43, 58);
+    transition: border-radius 2s ease-in, box-shadow 500ms 1.5s;
+}
+
+#box-3:hover {
+    box-shadow: 10px 3px rgba(0, 0, 0, 0.295);
+    border-radius: 100%;
+}
+
+#box-4 {
+    background-color: rgb(243, 240, 45);
+    transition: border-top 500ms, border-right 500ms 500ms, border-bottom 300ms 1s, border-left 300ms 1.5s
+}
+
+#box-4:hover {
+    border-top: 4px solid rgb(46, 20, 161);
+    border-bottom: 4px solid rgb(46, 20, 161);
+    border-left: 4px solid rgb(46, 20, 161);
+    border-right: 4px solid black;
+}
+
+#box-5 {
+    background-color: rgb(226, 43, 217);
+    transition: all 1s ease-out;
+}
+
+#box-5:hover {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#box-6 {
+    background-color: rgb(17, 61, 182);
+    transition: border-top-left-radius 1s, border-top-right-radius 1s;
+}
+
+#box-6:hover {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-image: radial-gradient(rgb(135, 135, 233),rgb(3, 46, 163));
+}
