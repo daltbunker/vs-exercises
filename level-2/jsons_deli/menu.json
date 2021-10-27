@@ -1,0 +1,87 @@
+{
+    "appetizers":[
+        {
+            "name":"chicken strips",
+            "ingredients":["chicken", "breading","sauce"],
+            "description":"Fried chicken strips with sauce of your choice."
+        },
+        {
+            "name":"artichoke dip",
+            "ingredients":["artichoke", "cream cheese", "bread"],
+            "description":"Roasted artichoke dip with sourdough bread."
+        },
+        {
+            "name":"hot wings",
+            "ingredients":["chicken wings", "hot sauce"],
+            "description":"Spicest wings in the west."
+        }
+    ],
+    "cold sandwiches":[
+        {
+            "name":"blta",
+            "ingredients":["bacon", "lettuce", "tomato", "avovodo", "focaccia bread"],
+            "description":"BLT with avocodo on a lighly toasted focaccia."
+        },
+        {
+            "name":"ham and swiss",
+            "ingredients":["ham", "swiss cheese", "sourdough", "mustard"],
+            "description":"Cold ham and swiss on sourdough."
+        }
+    ],
+    "hot sandwiches":[
+        {
+            "name":"pulled pork",
+            "ingredients":["pulled pork", "bbq sauce", "focaccia bread"],
+            "description":"Warm bbq pulled pork on focaccia with side of fries."
+        },
+        {
+            "name":"chili dog",
+            "ingredients":["chili", "hot dog", "sourdough"],
+            "description":"Hot chili dog in a sourdough loaf with a side salad."
+        },
+        {
+            "name":"steak",
+            "ingredients":["steak", "focaccia", "veggies"],
+            "description":"Classic steak sandwich with side of fries."
+        }
+    ],
+    "desserts":[
+        {
+            "name":"key lime pie",
+            "ingredients":["lime", "pie crust", "pie filling"],
+            "description":"World famous key lime pie."
+        },
+        {
+            "name":"brownies",
+            "ingredients":["brownie mix", "milk", "eggs"],
+            "description":"Lava brownies made from grandmothers cook book."
+        },
+        {
+            "name":"vanilla ice cream",
+            "ingredients":["vanilla ice cream", "caramel"],
+            "description":"Vanilla ice cream topped with caramel"
+        },
+        {
+            "name":"chocolate ice cream",
+            "ingredients":["chocolate ice cream", "chocolate syrup"],
+            "description":"Chocolate ice cream topped with chocolate glaze"
+        }
+    ],
+    "drinks":[
+        {
+            "name":"iced tea",
+            "ingredients":["ice", "tea"],
+            "description":"Sweet ice tea."
+        },
+        {
+            "name":"coke",
+            "ingredients":["coke"],
+            "description":"small, medium, and large."
+        },
+        {
+            "name":"lemonade",
+            "ingredients":["lemons", "sugar", "water"],
+            "description":"House made lemonade"
+        }
+    ]
+}
