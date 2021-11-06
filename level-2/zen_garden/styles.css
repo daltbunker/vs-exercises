@@ -181,9 +181,20 @@ h2 {
 }
 
 .icons-section a:hover {
-    background-color: rgba(255, 255, 255, 0.151);
-    border-radius: 100%;
+    opacity: 80%;
 }
+
+.html-icon::before {content: "5"}
+.html-icon:hover::before {content: "%"}
+.css-icon::before {content: "3"}
+.css-icon:hover::before {content: "#"}
+.cc-icon::before {content: "c"}
+.cc-icon:hover::before {content: "C"}
+.ally-icon::before {content: "a"}
+.ally-icon:hover::before {content: "A"}
+.git-icon::before {content: "g"}
+.git-icon:hover::before {content: "G"}
+
 
 /*   Designs List   */
 
