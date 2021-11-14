@@ -1,0 +1,23 @@
+body {
+    font-family: Open Sans,Arial,sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1483347756197-71ef80e95f73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bm9ydGhlcm4lMjBsaWdodHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.main-wrap {
+    background-color: rgba(255, 255, 255, 0.877);
+    margin: 60px 40px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.main-title {
+    font-size: 37px;
+    text-align: center;
+}
+
+.main-description {
+    text-align: center;
+}
