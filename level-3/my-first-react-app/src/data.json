@@ -1,0 +1,38 @@
+[
+    {
+        "type": "Polar Bear",
+        "endangered": true,
+        "description": "Polar bears are the largest carnivorous land mammals on Earth. They are about seven to eight feet long, measured from the nose to the tip of their very short tail. Male polar bears are much larger than the females. A large male can weigh more than 1,700 pounds, while a large female is about half that size (up to 1,000 pounds). ",
+        "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpngimg.com%2Fuploads%2Fpolar_bear%2Fpolar_bear_PNG26.png&f=1&nofb=1"
+    },
+    {
+        "type": "Wolf",
+        "endangered": false,
+        "description": "Wolves are highly social animals and live in packs. Worldwide, pack size will depend on the size and abundance of prey. In Yellowstone, average pack size is 10 individuals. The pack is a complex social family, with older members (often the alpha male and alpha female) and subordinates, each having individual personality traits and roles within the pack.",
+        "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpurepng.com%2Fpublic%2Fuploads%2Flarge%2F31506531509x39cjifepls869wrxj3ebjvg4dmtlehcxx37dhzvwyhpu1bn4omz6cvo3zebyfr6met7aus6f5umzj3sqlrznnmpijqwulziusni.png&f=1&nofb=1"
+    },
+    {
+        "type": "Snow Leopard",
+        "endangered": true,
+        "description": "Only perhaps 4,000 snow leopards (Panthera uncia) still haunt the high peaks of Central Asia from Bhutan to China. These solitary cats are powerful predators that target big game such as bharal (blue sheep) and ibex, but a taste for livestock has cost many snow leopards their own lives.",
+        "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fassets.worldwildlife.org%2Fphotos%2F5440%2Fimages%2Fstory_full_width%2F680-02448747s.png%3F1382552067&f=1&nofb=1"
+    },
+    {
+        "type": "Owl",
+        "endangered": true,
+        "description": "A large, powerful owl of the high Arctic tundra, colored for camouflage during northern winters. In summer it may be nomadic, concentrating and nesting where there are high populations of the small rodents called lemmings. At other times it takes a wide variety of prey, including birds as big as geese.",
+        "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.jing.fm%2Fclipimg%2Ffull%2F128-1288107_neither-rain-nor-snow-affects-their-watch-ful.png&f=1&nofb=1"
+    },
+    {
+        "type": "Penguin",
+        "endangered": false,
+        "description": "Penguins are flightless seabirds that live almost exclusively below the equator. Some island-dwellers can be found in warmer climates, but most—including emperor, adélie, chinstrap, and gentoo penguins—reside in and around icy Antarctica. A thick layer of blubber and tightly-packed, oily feathers are ideal for colder temperatures.",
+        "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F2016%2F03%2FPenguin-Free-Download-PNG.png&f=1&nofb=1"
+    },
+    {
+        "type": "Walrus",
+        "endangered": false,
+        "description": "Walruses have long tusks and a prominent mustache. These large marine mammals are found near the Arctic Circle. They are extremely social and snort and bellow loudly at their companions. During the mating season they are quite aggressive.",
+        "image": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pngplay.com%2Fwp-content%2Fuploads%2F2%2FWalrus-PNG-Free-File-Download.png&f=1&nofb=1"
+    }
+]

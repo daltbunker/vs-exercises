@@ -1,23 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
 body {
-    font-family: Open Sans,Arial,sans-serif;
-    background-image: url("https://images.unsplash.com/photo-1483347756197-71ef80e95f73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bm9ydGhlcm4lMjBsaWdodHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60");
+    font-family: 'Titillium',Arial,sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1539604880233-d282d9bac272?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
     background-attachment: fixed;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 .main-wrap {
-    background-color: rgba(255, 255, 255, 0.877);
-    margin: 60px 40px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.719);
+    margin: 20px 40px;
     padding: 10px;
     border-radius: 6px;
+    height: 220px;
 }
 
 .main-title {
-    font-size: 37px;
     text-align: center;
+    font-size: 37px;
+    margin-top: 20px;
 }
 
-.main-description {
+.main-text {
+    width: 50%;
+}
+
+.endangered {
+    font-weight: 700;
     text-align: center;
+    margin-bottom: 10px;
 }
