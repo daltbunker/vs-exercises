@@ -1,0 +1,28 @@
+.header-wrap {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg);
+    background-position: 60% 100%;
+    background-size: cover;
+    color: white;
+}
+
+.header-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.header-title, .header-subtitle {
+    width: 280px;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.header-subtitle {
+    font-size: 24px;
+    text-align: center;
+}

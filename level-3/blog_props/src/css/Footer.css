@@ -1,0 +1,42 @@
+.footer-wrap {
+    margin-bottom: 40px;
+}
+
+.icon-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0px;
+}
+
+.icon-list li {
+    width: 60px;
+    height: 60px;
+    margin: 0px 10px;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(70%) contrast(1000%);
+}
+
+.icon-list li:hover {
+    cursor: pointer;
+    filter: grayscale(0%);
+}
+
+.twitter-icon {
+    background-image: url('../icons/twitter-blue.png');
+}
+
+.facebook-icon {
+    background-image: url('../icons/facebook-blue.png');
+}
+
+.github-icon {
+    background-image: url('../icons/github-blue.png');
+}
+
+.copyright {
+    color: #0000008C;
+    font-style: italic;
+    text-align: center;
+}

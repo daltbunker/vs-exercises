@@ -1,0 +1,40 @@
+.blog-post {
+    border-bottom: 1px solid #00000049;
+    margin: 0px 40px;
+    max-width: 500px;
+}
+
+/* .blog-post:first2elements {} */
+
+.blog-subtitle {
+    font-weight: 100;
+}
+
+.blog-date {
+    font-family: 'Lora';
+    font-style: italic;
+    color: #0000008C;
+}
+
+.blog-date span {
+    color: black;
+}
+
+.link:hover {
+    color: #0085a1;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 990px){
+    .blog-post {
+        max-width: 700px;
+    }
+
+    .blog-title {
+        font-size: 36px;
+    }
+
+    .blog-subtitle {
+        font-size: 28px;
+    }
+}
