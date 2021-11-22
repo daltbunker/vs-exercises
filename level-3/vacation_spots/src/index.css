@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 body {
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(224, 238, 255), white);
     margin: 0px;
     padding: 0px;
 }
@@ -40,7 +39,7 @@ h1 {
     border-radius: 4px;
 }
 
-@media only screen and(max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .app-container {
         grid-template-columns: 1fr;
     }
