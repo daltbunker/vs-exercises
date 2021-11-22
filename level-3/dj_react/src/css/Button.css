@@ -1,0 +1,29 @@
+
+.Button {
+    border: none;
+    padding: 10px;
+    border: 4px solid black;
+    border-radius: 100%;
+    height: 120px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: rgb(106, 255, 106);
+    transition-duration: 300ms;
+}
+
+.Button:hover {
+    cursor: pointer;
+    background-color: rgb(84, 230, 84);
+    animation: buttonRotate 500ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes buttonRotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

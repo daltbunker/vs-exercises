@@ -1,0 +1,28 @@
+
+.title {
+    font-size: 80px;
+    position: absolute;
+    box-shadow: -30px 18px 5px rgb(70, 68, 68);
+    border: 5px solid black;
+    border-radius: 5px;
+    top: 200px;
+    padding: 10px;
+    transform: rotateZ(-60deg);
+}
+
+
+.Squares {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.Buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 5px;
+}
