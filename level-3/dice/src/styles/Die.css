@@ -12,4 +12,5 @@
 
 .die:hover {
     cursor: pointer;
+    font-weight: 800;
 }
