@@ -19,13 +19,17 @@ class BadgeForm extends React.Component {
 
     handleChange = e => {
         const { name, value } = e.target
-        this.setState({ [name]: value})
+        if (name === "phone" && (/[^0-9]/.test(value) || value.length > 10)) {
+            return
+        } else {
+            this.setState({ [name]: value})
+        }
     }
 
     validateForm = () => {
         for (let key in this.state) {
             if (this.state[key].length < 3) {
-                return true
+                return key
             }
         }
         return false
@@ -59,31 +63,31 @@ class BadgeForm extends React.Component {
                     <div className="input-fields">
                         <label>
                             First Name:
-                            <input type="text" onChange={this.handleChange} value={this.state.firstName} name="firstName"/>
+                            <input type="text" style={this.validateForm() === "firstName" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.firstName} name="firstName"/>
                         </label>
                         <label>
                             Last Name:
-                            <input type="text" onChange={this.handleChange} value={this.state.lastName} name="lastName" />
+                            <input type="text" style={this.validateForm() === "lastName" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.lastName} name="lastName" />
                         </label>
                         <label>
                             Phone:
-                            <input type="text" onChange={this.handleChange} value={this.state.phone} name="phone" />
+                            <input type="text" style={this.validateForm() === "phone" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.phone} name="phone" />
                         </label>
                         <label>
                             Email:
-                            <input type="text" onChange={this.handleChange} value={this.state.email} name="email" />
-                        </label>
-                        <label>
-                            Birthplace:
-                            <input type="text" onChange={this.handleChange} value={this.state.birthplace} name="birthplace" />
+                            <input type="text" style={this.validateForm() === "email" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.email} name="email" />
                         </label>
                         <label>
                             Favorite Food:
-                            <input type="text" onChange={this.handleChange} value={this.state.favoriteFood} name="favoriteFood" />
+                            <input type="text" style={this.validateForm() === "favoriteFood" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.favoriteFood} name="favoriteFood" />
+                        </label>
+                        <label>
+                            Birthplace:
+                            <input type="text" style={this.validateForm() === "birthplace" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.birthplace} name="birthplace" />
                         </label>
                         <label className="about">
                             About:
-                            <textarea onChange={this.handleChange} value={this.state.about} name="about" />
+                            <textarea style={this.validateForm() === "about" ? { border: "2px solid green" } : { border: "none" }} onChange={this.handleChange} value={this.state.about} name="about" />
                         </label>
                     </div>
                     <Button label="SUBMIT"/>
