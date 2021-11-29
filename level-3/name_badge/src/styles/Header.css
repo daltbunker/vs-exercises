@@ -1,0 +1,17 @@
+.header {
+    background-color: #F24B78;
+    position: sticky;
+    top: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.header h2 {
+    color: white;
+    margin: 0 0 0 20px;
+    border: 4px solid white;
+    border-radius: 10px;
+    width: 170px;
+    text-align: center;
+}

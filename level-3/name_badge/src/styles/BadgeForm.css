@@ -1,0 +1,51 @@
+.badge-form {
+    background-color: #05DBF2;
+    margin-top: 30px;
+    border: 12px solid #F24B78;
+    border-radius: 4px;
+    width: 650px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-fields {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 6px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+}
+
+.badge-form label {
+    color: white;
+    font-weight: bold;
+    margin: 4px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.badge-form input, .badge-form textarea {
+    border: none;
+    width: 120px;
+    margin-left: 4px;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    grid-column: 1 / 3;
+    height: 100px;
+}
+
+.badge-form textarea {
+    width: 76%;
+}
