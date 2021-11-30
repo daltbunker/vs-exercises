@@ -25,12 +25,14 @@ class App extends React.Component {
   submitEvent = obj => {
     this.setState(prevState => ({badges: [...prevState.badges, obj]}))
   }
+
   render() {
     return (
       <div className="app">
         <Header text="NAME BADGE"/>
         <BadgeForm handleSubmit={this.submitEvent}/>
         <ListContainer list={this.state.badges}/>
+        <div className="bottom-cover"></div>
       </div>
     )
   }

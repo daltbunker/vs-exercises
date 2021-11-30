@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/Button.css'
 
-function Button({ label }) {
+function Button({ label, buttonState }) {
     return (
-        <button className="button">{label}</button>
+        <button disabled={buttonState} style={buttonState ? {opacity: "60%"} : {opacity: "100%"}} className="button">{label}</button>
     )
 }
 

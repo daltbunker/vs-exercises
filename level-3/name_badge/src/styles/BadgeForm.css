@@ -1,6 +1,8 @@
 .badge-form {
+    box-sizing: 0;
     background-color: #05DBF2;
     margin-top: 30px;
+    margin-bottom: 20px;
     border: 12px solid #F24B78;
     border-radius: 4px;
     width: 650px;
