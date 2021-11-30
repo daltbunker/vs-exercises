@@ -1,0 +1,45 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 8px solid rgba(156, 7, 7, 0.452);
+}
+
+.header h2 {
+    width: 350px;
+    text-align: center;
+    color: white; 
+    border: 8px solid rgba(156, 7, 7, 0.452);
+    border-radius: 2px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.HitList {
+    margin: 100px 20px 20px 20px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+}
+
+.HitComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 350px;
+}
+
+.HitName {
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    background-color: rgba(5, 5, 5, 0.507);
+    border-radius: 15px;
+    padding: 20px;
+}
