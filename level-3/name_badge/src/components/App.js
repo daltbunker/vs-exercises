@@ -32,7 +32,6 @@ class App extends React.Component {
         <Header text="NAME BADGE"/>
         <BadgeForm handleSubmit={this.submitEvent}/>
         <ListContainer list={this.state.badges}/>
-        <div className="bottom-cover"></div>
       </div>
     )
   }

@@ -13,7 +13,8 @@ class BadgeForm extends React.Component {
             email: "",
             favoriteFood: "",
             birthplace: "",
-            about: ""
+            about: "",
+            validKey: true
         }
     }
 
@@ -23,16 +24,18 @@ class BadgeForm extends React.Component {
             return null
         } else {
             this.setState({ [name]: value})
+            this.validateForm()
         }
     }
 
     validateForm = () => {
         for (let key in this.state) {
-            if (this.state[key].length < 3) {
-                return key
+            if (this.state[key].length < 2) {
+                this.setState({validKey: key})
+                return null
             }
         }
-        return false
+        this.setState({validKey: false})
     }
 
     clearState = () => {
@@ -49,13 +52,13 @@ class BadgeForm extends React.Component {
 
     render() {
 
-        const inputArr = ["firstName", "lastName", "phone", "email", "favoriteFood", "birthplace"].map(inputName => {
+        const inputArr = ["firstName", "lastName", "phone", "email", "favoriteFood", "birthplace"].map((inputName, i) => {
             return (
-                <label>
+                <label key={i}>
                     {inputName.slice(0, 1).toUpperCase() + inputName.slice(1,).replace(/([A-Z])/, " $1")}:
                     <input 
                         type="text"
-                        style={this.validateForm() === inputName ? { border: "2px solid rgb(61, 197, 61)" } : null} 
+                        style={this.state.validKey === inputName ? { border: "2px solid rgb(61, 197, 61)" } : null} 
                         onChange={this.handleChange} 
                         value={this.state[inputName]} 
                         name={inputName}
@@ -77,14 +80,14 @@ class BadgeForm extends React.Component {
                         <label className="about">
                             About:
                             <textarea 
-                                style={this.validateForm() === "about" ? { border: "2px solid rgb(61, 197, 61)" } : null} 
+                                style={this.state.validKey === "about" ? { border: "2px solid rgb(61, 197, 61)" } : null} 
                                 onChange={this.handleChange} 
                                 value={this.state.about} 
                                 name="about" 
                             />
                         </label>
                     </div>
-                    <Button label="SUBMIT" buttonState={this.validateForm()}/>
+                    <Button label="SUBMIT" buttonState={this.state.validKey}/>
                 </form>
             </div>
         )
