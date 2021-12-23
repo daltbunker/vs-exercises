@@ -1,7 +1,7 @@
-import './css/App.css';
 import React, { useState } from 'react'
 import Square from './components/Square';
-import Button from './components/Button';
+import DjBoard from './components/DjBoard';
+import './App.css';
 
 function App() {
  
@@ -32,28 +32,16 @@ function App() {
     })
   }
 
-
-  const Squares = [], bigDjButtons = []
-  for (let i = 0; i < 4; i++) {
-    Squares.push(<Square color={colors[i]} key={i + 101}/>)
-    bigDjButtons.push(<Button onClick={() => bigDjEvent(i)} text={`Big DJ (${i + 1})`} key={i + 2} />)
-  }
-
-  const audio = new Audio('http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Sevish_-__nbsp_.mp3')
+  const Squares = colors.map((color, i) => <Square color={color} key={i}/>)
 
   return (
     <div className='App'>
       <div className='Squares'>
         {Squares}
       </div>
-      <div className='Buttons'>
+      <div className='DjBoard'>
         <h1 className='title'>REACT DJ</h1>
-        <Button onClick={smallTimeEvent} text='Small Time' />
-        <Button onClick={partyEvent} text='Party' />
-        <Button onClick={() => blueEvent(2)} text='Left Blue' />
-        <Button onClick={() => blueEvent(3)} text='Right Blue' />
-        {bigDjButtons}
-        <Button text='Play Audio' onClick={() => audio.play()} />
+        <DjBoard clickEvents={[smallTimeEvent, partyEvent, blueEvent, bigDjEvent]} />
       </div>
     </div>
   );

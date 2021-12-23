@@ -23,7 +23,7 @@ body {
     column-gap: 10px;
 }
 
-.Buttons {
+.DjBoard {
     display: grid;
     grid-template-columns: repeat(5, 120px);
     justify-content: center;
