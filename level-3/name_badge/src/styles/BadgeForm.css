@@ -37,6 +37,10 @@
     border-radius: 4px;
 }
 
+.badge-form textarea {
+    resize: none;
+}
+
 form {
     display: flex;
     flex-direction: column;

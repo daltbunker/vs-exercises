@@ -12,7 +12,6 @@ function BadgeForm(props) {
         favoriteFood: "",
         birthplace: "",
         about: "",
-        validKey: true
     })
 
     const handleChange = e => {
@@ -21,18 +20,7 @@ function BadgeForm(props) {
             return null
         } else {
             setFormInput(prevFormInput => ({...prevFormInput, [name]: value}))
-            validateForm()
         }
-    }
-
-    const validateForm = () => {
-        for (let key in formInput) {
-            if (formInput[key].length < 3) {
-                setFormInput(prevState => ({...prevState, validKey: key}))
-                return null
-            }
-        }
-        setFormInput(prevState => ({...prevState, validKey: false}))
     }
 
     const clearState = () => {
@@ -44,7 +32,6 @@ function BadgeForm(props) {
             favoriteFood: "",
             birthplace: "",
             about: "",
-            validKey: true
         })
     }
 
@@ -58,6 +45,7 @@ function BadgeForm(props) {
                     onChange={handleChange} 
                     value={formInput[inputName]} 
                     name={inputName}
+                    required
                 />
             </label>
         )
@@ -79,10 +67,11 @@ function BadgeForm(props) {
                             onChange={handleChange} 
                             value={formInput.about} 
                             name="about" 
+                            required
                         />
                     </label>
                 </div>
-                <Button label="SUBMIT" buttonState={formInput.validKey}/>
+                <Button label="SUBMIT"/>
             </form>
         </div>
     )
