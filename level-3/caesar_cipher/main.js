@@ -6,13 +6,13 @@ function encrypt(message, value) {
     let encryptedMessage = ""
     for (let i = 0; i < message.length; i++) {
         if (/[a-z]/.test(message[i])) {
-            const newCharCode = message[i].charCodeAt() + value
+            const newCharCode = message[i].charCodeAt() + (value % 26)
             encryptedMessage +=  newCharCode > 122 ? String.fromCharCode(newCharCode - 122 + 96) : String.fromCharCode(newCharCode)
         } else {
             encryptedMessage += message[i]
         }
     }
-    console.log(encryptedMessage)
+    return encryptedMessage
 }
 
-encrypt(input, shift)
+console.log(encrypt(input, shift))
