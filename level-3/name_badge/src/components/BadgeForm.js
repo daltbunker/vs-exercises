@@ -1,17 +1,20 @@
 import React, {useState} from 'react'
-import Button from './Button'
 import '../styles/BadgeForm.css'
+
+const defaultInput = {
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    favoriteFood: "",
+    birthplace: "",
+    about: "",
+}
 
 function BadgeForm(props) {
 
     const [ formInput, setFormInput ] = useState({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        email: "",
-        favoriteFood: "",
-        birthplace: "",
-        about: "",
+        ...defaultInput
     })
 
     const handleChange = e => {
@@ -25,16 +28,9 @@ function BadgeForm(props) {
 
     const clearState = () => {
         setFormInput({
-            firstName: "",
-            lastName: "",
-            phone: "",
-            email: "",
-            favoriteFood: "",
-            birthplace: "",
-            about: "",
+            ...defaultInput
         })
     }
-
 
     const inputArr = ["firstName", "lastName", "phone", "email", "favoriteFood", "birthplace"].map((inputName, i) => {
         return (
@@ -71,7 +67,7 @@ function BadgeForm(props) {
                         />
                     </label>
                 </div>
-                <Button label="SUBMIT"/>
+                <button className="submit-button">SUBMIT</button>
             </form>
         </div>
     )
