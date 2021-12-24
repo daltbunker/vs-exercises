@@ -11,7 +11,7 @@ const defaultInput = {
     about: "",
 }
 
-function BadgeForm(props) {
+function BadgeForm({handleSubmit}) {
 
     const [ formInput, setFormInput ] = useState({
         ...defaultInput
@@ -51,7 +51,7 @@ function BadgeForm(props) {
         <div className='badge-form'>
             <form onSubmit={(e) => {
                 e.preventDefault()
-                props.handleSubmit(formInput)
+                handleSubmit(formInput)
                 clearState() 
                 
             }}>
