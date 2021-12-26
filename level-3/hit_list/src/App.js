@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import HitList from '../components/HitList'
+import HitList from './components/HitList'
 
 function App() {
   return (
