@@ -1,34 +1,28 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect  } from 'react'
 import axios from "axios"
 import HitComponent from './HitComponent'
 
-class HitList extends Component {
+function HitList() {
 
-    constructor() {
-        super()
-        this.state = {
-            hitArr: []
-        }
-    }
+    const [ hitArr, setHitArr] = useState([])
 
-    componentDidMount() {
+    useEffect(() => {
         axios.get("https://raw.githubusercontent.com/VSchool/vschool-api/master/static/hitlist.json")
-            .then(resp => this.setState({hitArr: [...resp.data]}))
-    }
+            .then(resp => setHitArr([...resp.data]))
+    }, [])
 
-
-    render() {
-        const hitComponents = this.state.hitArr.map(obj => {
-            return (
-                <HitComponent image={obj.image} name={obj.name}/>
-            )
-        })
+   
+    const hitComponents = hitArr.map(obj => {
         return (
-            <div className='HitList'>
-                {hitComponents}
-            </div>
+            <HitComponent image={obj.image} name={obj.name}/>
         )
-    }
+    })
+    return (
+        <div className='HitList'>
+            {hitComponents}
+        </div>
+    )
+    
 }
 
 export default HitList
