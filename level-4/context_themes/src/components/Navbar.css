@@ -1,0 +1,23 @@
+.Navbar {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #5c96ec;
+}
+
+.Navbar a {
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-decoration: none;
+}
+
+.Navbar a:last-child {
+    background-image: url('../images/shopping-cart.png');
+    background-size: cover;
+    color: white;
+    width: 25px;
+    height: 25px;
+}

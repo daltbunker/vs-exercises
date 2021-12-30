@@ -1,0 +1,22 @@
+.Cart {
+    border: 2px solid white;
+    border-radius: 3px;
+    padding: 15px;
+    color: white;
+    grid-column: 4 / 6;
+}
+
+.Cart-item {
+    margin-bottom: 5px;
+}
+
+.Cart-item-title {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.Cart-item-content {
+    margin-left: 22px;
+    font-weight: bold;
+    font-size: 20px;
+}

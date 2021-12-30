@@ -1,0 +1,5 @@
+.main {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
