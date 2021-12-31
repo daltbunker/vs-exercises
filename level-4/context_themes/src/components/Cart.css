@@ -2,12 +2,13 @@
     border: 2px solid white;
     border-radius: 3px;
     padding: 15px;
-    color: white;
     grid-column: 4 / 6;
+    width: 70%;
 }
 
 .Cart-item {
-    margin-bottom: 5px;
+    color: white;
+    margin-bottom: 15px;
 }
 
 .Cart-item-title {
@@ -19,4 +20,8 @@
     margin-left: 22px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.Cart-item-subcontent {
+    margin-left: 22px;
 }

@@ -1,28 +1,33 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Cart.css'
+import {ThemeContext} from '../ThemeProvider'
 
-function Cart() {
+const darkStyles = {
+    background: 'transparent',
+    textColor: 'white',
+}
+
+const lightStyles = {
+    background: 'white',
+    textColor: 'black',
+}
+
+function Cart({data}) {
+
+    const {theme} = useContext(ThemeContext)
+    const currStyles = theme === "light" ? lightStyles : darkStyles
+
     return (
-        <div className="Cart">
-            <div className="Cart-item">
-                <div className="Cart-item-title">Price:</div>
-                <div className="Cart-item-content">$35</div>
+        <div className="Cart" style={{backgroundColor: currStyles.background}}>
+            <div className="Cart-item" style={{color: currStyles.textColor}}>
+                <div className="Cart-item-title">Depart:</div>
+                <div className="Cart-item-content">{data.from}{' -> '}{data.to}</div>
+                <div className="Cart-item-subcontent">{data.depart}</div>
             </div>
-            <div className="Cart-item">
-                <div className="Cart-item-title">From:</div>
-                <div className="Cart-item-content">San Diego, California</div>
-            </div>
-            <div className="Cart-item">
-                <div className="Cart-item-title">Departing:</div>
-                <div className="Cart-item-content">June 3, 2022</div>
-            </div>
-            <div className="Cart-item">
-                <div className="Cart-item-title">To:</div>
-                <div className="Cart-item-content">Phoenix, Arizona</div>
-            </div>
-            <div className="Cart-item">
-                <div className="Cart-item-title">Price:</div>
-                <div className="Cart-item-content">June 4, 2022</div>
+            <div className="Cart-item" style={{color: currStyles.textColor, display: data.direction === 'oneWay' ? 'none' : 'block'}}>
+                <div className="Cart-item-title">Return:</div>
+                <div className="Cart-item-content">{data.to + " -> " + data.from}</div>
+                <div className="Cart-item-subcontent">{data.return}</div>
             </div>
         </div>
     )

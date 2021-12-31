@@ -4,20 +4,28 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #5c96ec;
 }
 
-.Navbar a {
+.Navbar button {
     font-weight: bold;
-    color: black;
+    background-color: transparent;
+    border: transparent;
     margin: 0;
     text-decoration: none;
 }
 
-.Navbar a:last-child {
+.Navbar button:nth-child(2) {
+    border: 2px solid black;
+    padding: 4px;
+}
+
+.Navbar button:nth-child(2):hover {
+    cursor: pointer;
+}
+
+.Navbar button:last-child {
     background-image: url('../images/shopping-cart.png');
     background-size: cover;
-    color: white;
     width: 25px;
     height: 25px;
 }

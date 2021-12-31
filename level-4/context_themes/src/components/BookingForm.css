@@ -14,10 +14,9 @@
     width: 320px;
     margin: 10px;
     justify-content: space-between;
-    /* flex-direction: column; */
 }
 
-.input-container input {
+.input-container input, .input-container select {
     margin-right: 7px;
     width: 200px;
     height: 32px;
@@ -25,7 +24,7 @@
 
 .input-container img {
     position: absolute;
-    left: 360px;
+    left: 380px;
     width: 20px;
     height: 20px;
 }
@@ -42,8 +41,3 @@
     color: white;
     font-weight: bold;
 }
-/* 
-.radio {
-    width: 500px;
-} */
-

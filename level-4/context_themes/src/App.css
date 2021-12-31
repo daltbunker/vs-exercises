@@ -1,5 +1,5 @@
 .main {
-  margin: 20px;
+  margin: 20px 40px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
