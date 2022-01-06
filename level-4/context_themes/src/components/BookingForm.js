@@ -35,7 +35,7 @@ function BookingForm({data, onFormChange}) {
                     </select>
                     <img src={checkImg} alt="" style={{display: data.from.length > 0 ? 'block' : 'none' }}/>
                 </div>
-                <div className="input-container" style={{display: data.direction === 'oneWay' ? 'none' : 'flex'}}>
+                <div className="input-container">
                     <div className="input-title">To:</div>
                     <select name="to" onChange={onFormChange}>
                         <option value=""></option>

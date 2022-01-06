@@ -17,11 +17,15 @@ function Cart({data}) {
     const {theme} = useContext(ThemeContext)
     const currStyles = theme === "light" ? lightStyles : darkStyles
 
+    function toAndFromSelected() {
+        return data.to.length > 0 && data.from.length > 0
+    }
+
     return (
-        <div className="Cart" style={{backgroundColor: currStyles.background}}>
+        <div className="Cart" style={{backgroundColor: currStyles.background, display: toAndFromSelected() ? "block" : "none"}}>
             <div className="Cart-item" style={{color: currStyles.textColor}}>
                 <div className="Cart-item-title">Depart:</div>
-                <div className="Cart-item-content">{data.from}{' -> '}{data.to}</div>
+                <div className="Cart-item-content">{data.from + " -> " + data.to}</div>
                 <div className="Cart-item-subcontent">{data.depart}</div>
             </div>
             <div className="Cart-item" style={{color: currStyles.textColor, display: data.direction === 'oneWay' ? 'none' : 'block'}}>
