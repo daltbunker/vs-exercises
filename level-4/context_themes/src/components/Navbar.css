@@ -16,11 +16,13 @@
 
 .Navbar button:nth-child(2) {
     border: 2px solid black;
+    border-radius: 4px;
     padding: 4px;
 }
 
 .Navbar button:nth-child(2):hover {
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 .Navbar button:last-child {
