@@ -9,7 +9,7 @@ function UglyThingCard({title, description, imgUrl, onDelete, onEditClicked, id}
             <div className="card-description">{description}</div>
             <img className="card-img" src={imgUrl} alt=""/>
             <div className="card-buttons" id={id}>
-                <button id="edit-btn" onClick={() => onEditClicked(title, description, imgUrl, id)}>EDIT</button>
+                <button id="edit-btn" onClick={() => onEditClicked(title, description, imgUrl, id)}></button>
                 <button id="delete-btn" onClick={() => onDelete(id)}></button>
             </div>
         </div>
