@@ -25,6 +25,7 @@ function UglyThingsProvider({children}) {
                 })
             })
         })
+        setEditMode([false, {}])
     }
 
     function deleteThing(id) {

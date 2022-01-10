@@ -5,18 +5,19 @@ import {UglyThingsContext} from './UglyThingsContext'
 function Form() {
 
     const {addThing, editThing, editMode} = useContext(UglyThingsContext)
-
-    const [formInput, setFormInput] = useState({
+    const blankFormInput = {
         title: "",
         description: "",
         imgUrl: ""
-    })
+    }
+
+    const [formInput, setFormInput] = useState(blankFormInput)
 
     useEffect(() => {
         return editMode[0] ? setFormInput(editMode[1]) : null
     }, [editMode])
 
-    const handleInputChange = (e) => {
+    function handleInputChange(e) {
         const {name, value} = e.target
         setFormInput(prevFormInput => {
             return {
@@ -24,6 +25,10 @@ function Form() {
                 [name]: value
             }
         })
+    }
+
+    function clearForm() {
+        setFormInput(blankFormInput)
     }
 
     const inputFieldArray = ["title", "description", "imgUrl"].map(val => {
@@ -50,6 +55,7 @@ function Form() {
             <form onSubmit={(e) => {
                 e.preventDefault()
                 editMode[0] ? editThing(formInput, editMode[1].id) : addThing(formInput)
+                clearForm()
             }}>
                 <div className="input-fields">
                     {inputFieldArray}

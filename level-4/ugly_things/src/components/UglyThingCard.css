@@ -24,23 +24,27 @@
     justify-content: center;
 }
 
+.card-buttons button:hover {
+    cursor: pointer;
+}
+
 #edit-btn{
     border: none;
+    margin: 15px;
     color: white;
     background-color: black;
     font-weight: bold;
-    margin: 15px;
     border-radius: 4px;
     padding: 6px 12px;
 }
 
 #delete-btn {
     border: none;
+    margin: 15px;
     background-color: transparent;
     background-image: url('../trash.png');
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 15px;
     height: 23px;
     width: 23px;
 }

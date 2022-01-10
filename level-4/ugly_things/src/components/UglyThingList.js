@@ -9,6 +9,7 @@ function UglyThingList() {
 
     function handleEdit(title, description, imgUrl, id) {
         setEditMode([true, {id, title, description, imgUrl}])
+        window.scrollTo(0, 0)
     }
 
     const uglyThingCards = uglyThingsArray.map(thing => {
