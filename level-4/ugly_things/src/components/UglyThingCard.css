@@ -1,0 +1,46 @@
+.UglyThingCard {
+    margin: 15px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.card-img {
+    width: 350px;
+    height: 300px;
+}
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-btn{
+    border: none;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    margin: 15px;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+#delete-btn {
+    border: none;
+    background-color: transparent;
+    background-image: url('../trash.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 15px;
+    height: 23px;
+    width: 23px;
+}
