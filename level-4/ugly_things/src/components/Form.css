@@ -19,6 +19,8 @@
 .input-field label {
     font-size: 12px;
     margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     color: rgba(0, 0, 0, 0.664);
 }
 
