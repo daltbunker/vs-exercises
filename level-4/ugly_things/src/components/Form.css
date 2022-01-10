@@ -46,3 +46,9 @@
     cursor: pointer;
     background-color: #1ea544;
 }
+
+@media screen and (min-width: 992px) {
+    .input-fields {
+      flex-direction: row;
+    }
+}
