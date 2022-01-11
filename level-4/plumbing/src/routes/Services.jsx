@@ -5,9 +5,9 @@ export default function Services() {
     const container = {
         backgroundColor: "#aaaaaa33",
         padding: 15,
-        margin: 15,
+        margin: "15px 50px",
     }
-    
+
     return (
         <div>
             <div style={container}>
