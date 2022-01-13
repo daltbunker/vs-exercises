@@ -1,6 +1,9 @@
-import './App.css';
-import {NavLink, Outlet} from 'react-router-dom'
-import Footer from './components/Footer';
+import './App.css'
+import {NavLink, Routes, Route} from 'react-router-dom'
+import Footer from './components/Footer'
+import Home from './routes/Home'
+import Services from './routes/Services'
+import About from './routes/About'
 
 
 function App() {
@@ -16,7 +19,7 @@ function App() {
     <div className="app" style={{minHeight: "100vh", position: "relative"}}>
       <h1 style={{marginLeft: 50}}>The Plumbing Guys</h1>
       <nav style={{display: 'flex', justifyContent: 'space-evenly'}}>
-        <NavLink to="/home" style={({ isActive }) => {
+        <NavLink to="/" style={({ isActive }) => {
           return {
             ...navStyles,
             borderBottom: isActive ? "1px solid black" : "none",
@@ -37,7 +40,11 @@ function App() {
           }
         }}>About</NavLink>
       </nav>
-      <Outlet />
+      <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/services" element={<Services />}/>
+          <Route path="/about" element={<About />}/>
+      </Routes>
       <Footer />
     </div>
   );
