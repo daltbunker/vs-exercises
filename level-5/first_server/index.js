@@ -2,16 +2,10 @@ const express = require("express")
 const app = express()
 
 
+app.use(express.json())
 
-app.get("/", (req, res) => {
-    res.send({name: "eric", age: 12, city: "provo"})
-})
-
-app.get("/user", (req, res) => {
-    res.send("User Endpoint")
-})
-
-
+app.use("/users", require("./userRouter.js"))
+app.use("/destinations", require("./destinationRouter"))
 
 app.listen(9000, () => {
     console.log("Server is running on Port: 9000")
