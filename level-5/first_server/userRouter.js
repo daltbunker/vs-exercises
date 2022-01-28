@@ -16,6 +16,18 @@ userRouter.route("/:userId")
         const user = users.find(item => item._id === id)
         res.send(user)
     })
+    .delete((req, res) => {
+        const id = req.params.userId
+        const userIndex = users.findIndex(user => user._id === id)
+        users.splice(userIndex, 1)
+        res.send("User deleted!")
+    })
+    .put((req, res) => {
+        const id = req.params.userId
+        const userIndex = users.findIndex(user => user._id === id)
+        const updatedUser = Object.assign(users[userIndex], req.body)
+        res.send(updatedUser)
+    })
 
 userRouter.route("/")
     .get((req, res) => {

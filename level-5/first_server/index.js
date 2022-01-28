@@ -4,6 +4,11 @@ const app = express()
 
 app.use(express.json())
 
+app.use("/home", (req, res, next) => {
+    console.log("middleware")
+    next()
+})
+
 app.use("/users", require("./userRouter.js"))
 app.use("/destinations", require("./destinationRouter"))
 
