@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react'
 import './Form.css'
 import {UglyThingsContext} from './UglyThingsContext'
 
-function Form() {
+function Form(props) {
 
     const {addThing, editThing, editMode} = useContext(UglyThingsContext)
     const blankFormInput = {
@@ -14,7 +14,9 @@ function Form() {
     const [formInput, setFormInput] = useState(blankFormInput)
 
     useEffect(() => {
-        return editMode[0] ? setFormInput(editMode[1]) : null
+        if (editMode[0]) {
+            setFormInput(editMode[1])
+        }
     }, [editMode])
 
     function handleInputChange(e) {
@@ -57,13 +59,18 @@ function Form() {
                 editMode[0] ? editThing(formInput, editMode[1].id) : addThing(formInput)
                 clearForm()
             }}>
-                <div className="input-fields">
+                <div className="input-fields" style={{flexDirection: props.flexDirection}}>
                     {inputFieldArray}
                 </div>
-                <button id="create-btn">{editMode[0] ? "SAVE" : "ADD"}</button>
+                <button id="create-btn">{editMode[0] ? "SAVE" : props.buttonText}</button>
             </form>
         </div>
     )
+}
+
+Form.defaultProps = {
+    flexDirection: "row",
+    buttonText: "ADD"
 }
 
 export default Form
