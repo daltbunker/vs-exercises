@@ -35,6 +35,18 @@ destinationRouter.route("/:destinationId")
         const destination = destinations.find(dest => dest._id === id)
         res.send(destination)
     })
+    .put((req, res) => {
+        const id = req.params.destinationId
+        const destinationIndex = destinations.findIndex(dest => dest._id === id)
+        const updatedDestination = Object.assign(destinations[destinationIndex], req.body)
+        res.send(updatedDestination)
+    })
+    .delete((req, res) => {
+        const id = req.params.destinationId
+        const destinationIndex = destinations.findIndex(dest => dest._id === id)
+        destinations.splice(destinationIndex, 1)
+        res.send(`Destination(${id}) was deleted.`)
+    })
 
 destinationRouter.route("/")
     .get((res, req) => {

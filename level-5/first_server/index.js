@@ -1,13 +1,10 @@
+const morgan = require("morgan")
 const express = require("express")
 const app = express()
 
 
 app.use(express.json())
-
-app.use("/home", (req, res, next) => {
-    console.log("middleware")
-    next()
-})
+app.use(morgan("dev"))
 
 app.use("/users", require("./userRouter.js"))
 app.use("/destinations", require("./destinationRouter"))
