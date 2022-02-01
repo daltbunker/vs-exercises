@@ -56,7 +56,7 @@ destinationRouter.route("/")
         const destination = res.body
         destinations._id = uuid()
         destinations.push(destination)
-        req.send("Destination added")
+        req.send(destination)
     })
 
 module.exports = destinationRouter
