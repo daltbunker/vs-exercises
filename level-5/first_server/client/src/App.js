@@ -16,8 +16,13 @@ function App() {
       .catch(error => {
         console.log(error)
     })
-
   }, [])
+
+  function handleDelete(country) {
+    setDestinations(prevData => {
+      return prevData.filter(destination => destination.country !== country)
+    })
+  }
 
   return (
     <div className="App" style={{margin: 20}}>
@@ -27,7 +32,7 @@ function App() {
         <DestinationForm addDestination={setDestinations} setModal={setIsOpen} />
       </Modal>
       {destinations.map(destination => {
-        return <Destination key={destination._id} data={destination} />
+        return <Destination key={destination.country} data={destination} onDelete={handleDelete} />
       })}
     </div>
   );

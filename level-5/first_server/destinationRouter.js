@@ -44,8 +44,8 @@ destinationRouter.route("/:destinationId")
     .delete((req, res) => {
         const id = req.params.destinationId
         const destinationIndex = destinations.findIndex(dest => dest._id === id)
-        destinations.splice(destinationIndex, 1)
-        res.send(`Destination(${id}) was deleted.`)
+        const [oldDestination] = destinations.splice(destinationIndex, 1)
+        res.send(oldDestination)
     })
 
 destinationRouter.route("/")
