@@ -20,6 +20,14 @@ const bounties = [
         type: "jedi",
         _id: uuid()
     },
+    {
+        firstName: "Isaac",
+        lastName: "Simpson",
+        living: true,
+        bountyAmount: 25,
+        type: "jedi",
+        _id: uuid()
+    },
 ]
 
 bountyRouter.route("/")
