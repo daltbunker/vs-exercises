@@ -14,9 +14,9 @@
     
 .modal-content {
     position: relative;
-    width: 70%;
-    height: 70%;
-    background-color: #282c34;
+    width: 40%;
+    height: 40%;
+    background-color: #00000096;
     color: #fff;
     display: flex;
     align-items: center;

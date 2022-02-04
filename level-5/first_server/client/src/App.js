@@ -24,6 +24,17 @@ function App() {
     })
   }
 
+  function handleEdit(updatedDestination) {
+    setDestinations(prevData => {
+      return prevData.map(destination => {
+        if (destination._id === updatedDestination._id) {
+          return updatedDestination
+        }
+        return destination
+      })
+    })
+  }
+
   return (
     <div className="App" style={{margin: 20}}>
       <h2 style={{display: "inline", margin: 0}}>Destinations</h2>
@@ -32,7 +43,7 @@ function App() {
         <DestinationForm addDestination={setDestinations} setModal={setIsOpen} />
       </Modal>
       {destinations.map(destination => {
-        return <Destination key={destination.country} data={destination} onDelete={handleDelete} />
+        return <Destination key={destination.country} data={destination} onDelete={handleDelete} onEdit={handleEdit} setModal={setIsOpen} />
       })}
     </div>
   );
