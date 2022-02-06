@@ -9,6 +9,11 @@ app.get("/", (req, res) => {
     res.send("Home")
 })
 
+app.use((err, req, res, next) => {
+    console.log(err)
+    res.send({"error": err.message})
+})
+
 app.listen(9000, () => {
     console.log("Server running on port 9000")
 })
