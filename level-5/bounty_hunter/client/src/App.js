@@ -49,10 +49,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bounties</h1>
+      <h1>Bou<span className="h1-letters">n</span>ti<span className="h1-letters">e</span>s</h1>
       <Bounties bounties={bounties} onDelete={handleDelete} onSave={handleSave} />
       <div className="App-add-bounty">
-        <hr/>
         <h2>Add Bounty</h2>
         <BountyForm onSubmit={handleSubmit} />
       </div>
