@@ -1,7 +1,6 @@
 const express = require("express")
 const morgan = require("morgan")
 const mongoose = require("mongoose")
-const res = require("express/lib/response")
 const app = express()
 
 app.use(express.json())
