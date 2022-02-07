@@ -70,7 +70,7 @@ bountyRouter.route("/:bountyId")
                     res.status(500)
                     return next(err)
                 }
-                return res.status(201).send(`"${deletedBounty.firstName}" was removed from bounties`)
+                return res.status(200).send(`"${deletedBounty.firstName}" was removed from bounties`)
             }
         )
     })

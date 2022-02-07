@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BountyForm from './BountyForm';
 
-function Bounty({ bounty, onEdit, onDelete }) {
+function Bounty({ bounty, onDelete, onSave }) {
 
     const [showForm, setShowForm] = useState(false)
 
@@ -21,7 +21,7 @@ function Bounty({ bounty, onEdit, onDelete }) {
                     <button onClick={() => onDelete(bounty._id)}>DELETE</button>
                 </div>
             </div>
-            {showForm && <BountyForm buttonText="SAVE" inputData={{...bounty}} onSubmit={onEdit} setForm={() => setShowForm(false)} />}
+            {showForm && <BountyForm buttonText="SAVE" inputData={{...bounty}} onSubmit={onSave} hideForm={() => setShowForm(false)} />}
         </>
     )
 }

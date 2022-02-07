@@ -1,4 +1,3 @@
-import './App.css';
 import { useState, useEffect } from "react"
 import Bounties from './components/Bounties'
 import axios from "axios"
@@ -15,8 +14,7 @@ function App() {
       })
   }, [])
 
-  function handleSubmit(e, newBounty) {
-    e.preventDefault()
+  function handleSubmit(newBounty) {
     axios.post("/bounty", newBounty)
       .then(resp => {
         setBounties(prevBounties => [...prevBounties, resp.data])
@@ -34,14 +32,13 @@ function App() {
     }
   }
 
-  function handleEdit(e, input) {
-    e.preventDefault()
-    axios.put(`/bounty/${input._id}`)
+  function handleSave(updatedBounty) {
+    axios.put(`/bounty/${updatedBounty._id}`, updatedBounty)
       .then(() => {
         setBounties(prevBounties => {
           return prevBounties.map(bounty => {
-            if (bounty._id === input._id) {
-              return input
+            if (bounty._id === updatedBounty._id) {
+              return updatedBounty
             }
             return bounty
           })
@@ -53,8 +50,9 @@ function App() {
   return (
     <div className="App">
       <h1>Bounties</h1>
-      <Bounties bounties={bounties} onDelete={handleDelete} onEdit={handleEdit} />
+      <Bounties bounties={bounties} onDelete={handleDelete} onSave={handleSave} />
       <div className="App-add-bounty">
+        <hr/>
         <h2>Add Bounty</h2>
         <BountyForm onSubmit={handleSubmit} />
       </div>
