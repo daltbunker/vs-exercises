@@ -25,25 +25,29 @@ function App() {
   }
 
   function handleDelete(id) {
-    axios.delete(`/bounty/${id}`)
-      .then(resp => alert(`Bounty was deleted!`))
-      .catch(error => console.log(error))
-    setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== id))
+    if (window.confirm("Are you sure you want to delete this bounty?")) {
+      axios.delete(`/bounty/${id}`)
+        .then(() => {
+          setBounties(prevBounties => prevBounties.filter(bounty => bounty._id !== id))
+        })
+        .catch(error => console.log(error))
+    }
   }
 
   function handleEdit(e, input) {
     e.preventDefault()
     axios.put(`/bounty/${input._id}`)
-      .then(resp => console.log(resp.data))
-      .catch(error => console.log(error))
-    setBounties(prevBounties => {
-      return prevBounties.map(bounty => {
-        if (bounty._id === input._id) {
-          return input
-        }
-        return bounty
+      .then(() => {
+        setBounties(prevBounties => {
+          return prevBounties.map(bounty => {
+            if (bounty._id === input._id) {
+              return input
+            }
+            return bounty
+          })
+        })
       })
-    })
+      .catch(error => console.log(error))
   }
 
   return (
