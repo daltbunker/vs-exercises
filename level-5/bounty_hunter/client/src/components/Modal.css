@@ -1,0 +1,16 @@
+.Modal {
+    background-color: rgba(68, 68, 68, 0.719);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.Modal-children {
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

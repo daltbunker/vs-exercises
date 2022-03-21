@@ -25,7 +25,7 @@ h1 {
 }
 
 .h1-letters {
-  animation: flicker 10s 3;
+  animation: flicker 6s infinite;
 }
 
 .h1-letters:first-child {
@@ -76,9 +76,30 @@ button:hover {
 }
 
 .App-add-bounty {
-  padding: 10px;
-  background-color: rgba(167, 60, 60, 0.295);
+  position: relative;
+  padding: 10px 30px 50px 30px;
+  background-color: rgb(7, 7, 7);
+  border-radius: 3px;
 }
+
+.close-modal {
+  position: absolute;
+  font-size: 30px;
+  top: -5px;
+  padding: 2px 4px;
+  right: 5px;
+  background-color: transparent;
+}
+
+/* .subtitle-triangle {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white;
+  border-top: 5px solid transparent; 
+} */
 
 .BountyForm {
   display: flex;
@@ -92,6 +113,7 @@ button:hover {
 .input-container {
   margin: 0 10px;
 }
+
 
 .inner-input-container {
   margin: 10px 0;
