@@ -1,0 +1,15 @@
+.create-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.create-form form {
+    width: 40%
+}
+
+textarea {
+    resize: vertical;
+    min-height: 200px;
+    margin: 4px 0;
+}

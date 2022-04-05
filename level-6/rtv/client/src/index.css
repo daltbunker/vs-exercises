@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  /* background-image: url('./img/rushmore.jpg');
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgb(110, 110, 255);
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.primary-btn {
+  font-size: 14px;
+  padding: 4px 8px;
+  margin: 10px 0;
+  background-color: white;
+  border: 1px solid rgb(235, 86, 86);
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 200ms;
+}
+
+.primary-btn:hover {
+  background-color: rgb(235, 86, 86);
+  border-color: white;
+  color: white;
+}
+
+.secondary-btn {
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 2px 5px;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  transform: scale(1.1);
+}
+
+.issues-container {
+  display: flex;
+  justify-content: center;
+}
+
+.notify {
+  position: absolute;
+  text-transform: lowercase;
+  top: 4vw;
+  right: 46vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 10px;
+  background-color: rgb(235, 86, 86);
+  color: white;
+  height: 50px;
+  box-shadow: 0 0 6px 1px rgb(190, 190, 190);
+  border-radius: 4px;
+  z-index: 100;
+  animation: fadeOut 1s 1s forwards 1;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 100%;
+  }
+  to {
+      opacity: 0%;
+  }
+}

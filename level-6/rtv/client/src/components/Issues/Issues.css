@@ -1,0 +1,54 @@
+
+.issues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.836);
+    width: 70%;
+}
+
+.issue-card {
+    position: relative;
+    background-color: white;
+    width: 65%;
+    margin: 20px 0;
+    padding: 20px 40px;
+}
+
+.issue-description {
+    white-space: pre-wrap;
+    color: rgb(61, 61, 61);
+}
+
+.comments {
+    cursor: pointer;
+    font-size: 13px;
+}
+.comments:hover {
+    text-decoration: underline;
+}
+
+.comment {
+    margin: 5px;
+    font-size: 13px;
+}
+
+.comment-date {
+    color: rgb(177, 177, 177);
+}
+
+.comment-form input {
+    height: 19px;
+    margin-right: 10px;
+}
+
+.vote-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.issue-delete {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}

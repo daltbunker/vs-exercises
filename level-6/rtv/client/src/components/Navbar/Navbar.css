@@ -1,0 +1,28 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: 100ms linear;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid rgb(235, 86, 86);
+}
+
+.navbar h1 {
+    margin: 10px;
+}
+
+.nav-user span {
+    margin-right: 10px;
+    text-transform: capitalize;
+}
